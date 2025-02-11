@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "directionalpointer",
+  "version": "${version}",
+  "name": "DirectionalPointer",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/mrf0rtuna4/DirectionalPointer"
+  },
+  "license": "AGPL-3.0",
+  "icon": "assets/directionalpointer/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.heypers.directionalpointer.client.DirectionalPointerClient"
+    ],
+    "main": [
+      "org.heypers.directionalpointer.DirectionalPointer"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
