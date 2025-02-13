@@ -14,9 +14,6 @@
   "entrypoints": {
     "client": [
       "org.heypers.directionalpointer.client.DirectionalPointerClient"
-    ],
-    "main": [
-      "org.heypers.directionalpointer.DirectionalPointer"
     ]
   },
   "depends": {
