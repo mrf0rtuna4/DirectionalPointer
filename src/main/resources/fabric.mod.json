@@ -11,6 +11,9 @@
   "license": "AGPL-3.0",
   "icon": "assets/directionalpointer/icon.png",
   "environment": "client",
+  "mixins": [
+    "directionalpointer.mixins.json"
+  ],
   "entrypoints": {
     "client": [
       "org.heypers.directionalpointer.client.DirectionalPointerClient"
