@@ -13,7 +13,6 @@ public class DirectionalPointerRenderer {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.player == null || client.world == null) return;
 
-        // Получаем положение игрока
         Vec3d cameraPos = client.player.getLerpedPos(tickDelta);
         float yaw = client.player.getYaw(tickDelta);
         float pitch = client.player.getPitch(tickDelta);
@@ -23,13 +22,11 @@ public class DirectionalPointerRenderer {
         matrices.multiply(net.minecraft.util.math.RotationAxis.POSITIVE_Y.rotationDegrees(-yaw));
         matrices.multiply(net.minecraft.util.math.RotationAxis.POSITIVE_X.rotationDegrees(-pitch));
 
-        // Убираем Z-тест, чтобы стрелки были видны всегда
         RenderSystem.disableDepthTest();
 
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getLines());
         drawPointer(vertexConsumer, matrices);
 
-        // Включаем Z-тест обратно
         RenderSystem.enableDepthTest();
 
         matrices.pop();

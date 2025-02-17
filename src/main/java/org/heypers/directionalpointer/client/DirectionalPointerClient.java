@@ -47,7 +47,5 @@ public class DirectionalPointerClient implements ClientModInitializer {
 
             context.fill(centerX, centerY - cursorSize / 2, centerX + 1, centerY + cursorSize / 2, cursorColor);
         });
-
-
     }
 }
